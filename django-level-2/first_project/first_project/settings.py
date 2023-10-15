@@ -15,17 +15,14 @@ import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
-TEMPLATE_DIR =os.path.join(BASE_DIR,"templates")
-STATIC_DIR =os.path.join(BASE_DIR,"static")
-# print(os.path.abspath(__file__))
-# print(os.path.join(BASE_DIR,"templates"))
+TEMPLATE_DIR =  os.path.join(BASE_DIR,"templates")
 
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = "django-insecure-hd7@((3f!0krjz_#s20h9u3t6g4g!v+o$)uis*z)0lt^3w2!$d"
+SECRET_KEY = "django-insecure-bqid=vi@nn_3_$8&%(zm%($-0e)(0t@^serw4g(u3uj@w55h$i"
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -42,7 +39,6 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
-    "first_app"
 ]
 
 MIDDLEWARE = [
@@ -121,12 +117,7 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
-STATIC_URL = "/static/"
-
-#List of static files path
-STATICFILES_DIRS= [
-    STATIC_DIR
-]
+STATIC_URL = "static/"
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field

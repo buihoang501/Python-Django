@@ -1,12 +1,33 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
   </head>
   <body>
-    <h1>My hello!</h1>
-    <p>{{myhello}}</p>
+    <h1>Hi Django Lv 2</h1>
+    <h2>My records</h2>
+    <div class="djangotwo">
+      {% if access_records %}
+      <table>
+        <thead>
+          <th>Site name</th>
+          <th>Date Accessed</th>
+        </thead>
+
+        {% for access in access_records %}
+        <tr>
+          <td>{{access.name}}</td>
+          <td>{{access.date}}</td>
+        </tr>
+        {% endfor %}
+      </table>
+      {% else %}
+      <p>No Access</p>
+      {% endif %}
+    </div>
   </body>
 </html>

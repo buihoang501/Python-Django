@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>User</title>
+  </head>
+  <body>
+    <h2>My users</h2>
+
+    {% if users %}
+    <ul>
+      {% for user in users %}
+      <li>
+        {{ user.first_name}} {{user.last_name}} and user_email:
+        {{user.email_name}}
+      </li>
+
+      {% endfor %}
+    </ul>
+    {% else %}
+    <p>No user found!</p>
+
+    {% endif %}
+  </body>
+</html>

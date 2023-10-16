@@ -3,5 +3,5 @@ from AppTwo import views
 
 urlpatterns =[
 
-    re_path(r'^$', views.help, name='index'),
+    re_path(r'^$', views.user, name='index'),
 ]

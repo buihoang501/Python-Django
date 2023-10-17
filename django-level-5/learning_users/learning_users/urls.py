@@ -16,9 +16,15 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path,include, re_path
 from basic_app import views
+from django.conf.urls.static import static
+from django.conf import settings
 
 urlpatterns = [
     re_path(r'^$', views.index, name='index'),
     re_path(r'^basic_app/',include('basic_app.urls')),
     path("admin/", admin.site.urls),
-]
+    re_path(r'^logout/$', views.user_logout, name='logout'),
+    re_path(r'^special/$', views.special, name='special')
+     
+
+]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

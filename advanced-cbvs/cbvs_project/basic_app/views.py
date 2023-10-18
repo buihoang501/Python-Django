@@ -1,6 +1,10 @@
 from django.shortcuts import render
 
-from django.views.generic import View,TemplateView
+from django.views.generic import View,TemplateView,ListView,DetailView
+from . import models
+
+
+
 
 class IndexView(TemplateView):
     template_name ='index.html'
@@ -13,3 +17,15 @@ class IndexView(TemplateView):
         context['hello_str'] ='Hello Developers XD~'
         return context
 
+class SchoolListView(ListView):
+    #return a school_list
+    context_object_name = 'schools' # instead of school_list => schools is the name of list
+    model = models.School
+    template_name = 'basic_app/school_list.html'
+
+class SchoolDetailView(DetailView):
+    #return a school_detail
+    #edit name
+    context_object_name ='school_detail' 
+    model = models.School
+    template_name = 'basic_app/school_detail.html'

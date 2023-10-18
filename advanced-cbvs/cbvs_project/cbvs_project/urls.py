@@ -19,5 +19,5 @@ from basic_app import views
 
 urlpatterns = [
     path("admin/", admin.site.urls),
-    re_path(r'^$', views.CBView.as_view(), name='index')
+    re_path(r'^$', views.IndexView.as_view(), name='index')
 ]

@@ -1,6 +1,8 @@
 {
-  "[python]": {
-    "editor.defaultFormatter": "ms-python.autopep8"
+  "[django-html]": {
+    "editor.formatOnSave": false
   },
-  "python.formatting.provider": "none"
+  "[python]": {
+    "editor.defaultFormatter": "ms-python.black-formatter"
+  }
 }
